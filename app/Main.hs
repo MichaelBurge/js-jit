@@ -1,6 +1,11 @@
 module Main where
 
 import JS.Special
+import JS.Assembler
 
 main :: IO ()
-main = putStrLn $ show a_log
+main = do
+  let bs = assemble [IRet]
+  fun <- load bs
+  exec fun
+  putStrLn $ show a_log

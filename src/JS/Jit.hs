@@ -10,9 +10,15 @@ data Pad = Pad {
   
                } deriving (Eq, Show)
 
-data Assembly = Assembly BS.ByteString
+data Assembly = Assembly [Instruction]
 
 data Instruction = IAdd deriving (Eq, Show)
 
-assemble :: Statement -> Assembly
+compile :: Statement -> Assembly
+compile = undefined
+
+assemble :: Assembly -> BS.ByteString
 assemble = undefined
+
+exec :: BS.ByteString -> IO ()
+exec = undefined
