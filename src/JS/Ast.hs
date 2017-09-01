@@ -17,11 +17,6 @@ data BinopF a = BMult a a
               | BEq a a
               deriving (Eq, Show, Functor, Traversable, Foldable, Generic, Data, Typeable)
 
-data Pad = Pad {
-  _pad_size   :: Int,
-  _pad_values :: [Literal]
-  }
-
 data Literal = LNum Double
              | LFunc Ref
              | LNull

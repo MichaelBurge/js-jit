@@ -1,4 +1,6 @@
 module Main where
 
+import JS.Special
+
 main :: IO ()
-main = putStrLn "Hello"
+main = putStrLn $ show a_log
